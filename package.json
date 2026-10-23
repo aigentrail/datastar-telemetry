@@ -1,0 +1,18 @@
+{
+    "name": "datastar-telemetry",
+    "version": "0.1.0",
+    "type": "module",
+    "private": true,
+    "license": "MIT",
+    "exports": {
+        ".": "./src/telemetry.js",
+        "./datastar": "./src/datastar.js"
+    },
+    "scripts": {
+        "test": "node --test test/*.test.js",
+        "check": "tsc --allowJs --checkJs --strict --noEmit --target es2020 --module esnext --moduleResolution bundler --lib es2020,dom src/telemetry.js src/datastar.js"
+    },
+    "devDependencies": {
+        "typescript": "5.5.3"
+    }
+}
