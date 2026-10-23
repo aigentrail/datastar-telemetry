@@ -10,4 +10,4 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - run: nix-shell -p nodejs_24 --run 'npm ci --ignore-scripts --no-audit --no-fund && npm test && npm run check'
+      - run: nix shell nixpkgs#nodejs_24 --command bash -c 'npm ci --ignore-scripts --no-audit --no-fund && npm test && npm run check'
